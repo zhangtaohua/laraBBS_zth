@@ -19,3 +19,27 @@
 
 
 Route::get('/','PagesController@root')->name('root');
+
+// laravel 用户认证路由，
+Auth::routes();
+// 以上等同于好多个路由 下面用注释的方式给出来：
+// Authentication Routes...
+//Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+//Route::post('login', 'Auth\LoginController@login');
+//Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+//
+//// Registration Routes...
+//Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+//Route::post('register', 'Auth\RegisterController@register');
+//
+//// Password Reset Routes...
+//Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+//Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+//Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+//Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+// 我已有主页了，所以这个可以不要了，这个也是个主页的
+// 同时可以删除以下两个文件
+// $ rm app/Http/Controllers/HomeController.php
+// $ rm resources/views/home.blade.php
+//Route::get('/home', 'HomeController@index')->name('home');
