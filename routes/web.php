@@ -18,7 +18,8 @@
 //});
 
 
-Route::get('/','PagesController@root')->name('root');
+//Route::get('/','PagesController@root')->name('root');
+Route::get('/', 'TopicsController@index')->name('root');
 
 // laravel 用户认证路由，
 Auth::routes();
